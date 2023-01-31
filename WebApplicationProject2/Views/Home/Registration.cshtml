@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+
+</head>
+<body>
+    <div>
+        <form action="/Home/Registration" method="post">
+            <br /><br />
+            <h2 align="center" >Sign Up</h2><br />
+
+            <table align="center" border="4" cellpadding="20" >
+                <tr>
+                    <td>
+                        <label><b>Company Name</b></label>
+                        <br />
+                        <input type="text" placeholder="CeRa" name="CompanyName" data-sb-validations="required" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br /><br />
+                        <br />
+                    </td>
+
+                    <td>
+                        <label><b>Password</b></label>
+                        <br />
+                        <input type="text" placeholder="123" name="Password" data-sb-validations="required" required />
+                        <br /><br />
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Establishment Date</b></label>
+                        <br />
+                        <input type="date" name="CompanyEstablishmentDate" required />
+                        <br /><br />
+                        <br />
+                    </td>
+                    <td>
+                        <label><b>Company Type</b></label><br />
+                        <select name="CompanyType">
+                            <option value="" disabled selected>Choose Company Type</option>
+                            <option value="1">Incorporated Company</option>
+                            <option value="2">Limited Company</option>
+                            <option value="3">Unlimited Company</option>
+                            <option value="4">Cooperative Company</option>
+                            <option value="5">Commandite Company</option>
+                        </select>
+                        <br />
+                        <br /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Company Country</b></label>
+                        <br />
+                        <input type="text" placeholder="Türkiye" name="CompanyCountry" data-sb-validations="required" required />
+                        <br /><br />
+                        <br />
+                    </td>
+                    <td>
+                        <label><b>Company City</b></label>
+                        <br />
+                        <input type="text" placeholder="Istanbul" name="CompanyCity" data-sb-validations="required" required />
+                        <br /><br />
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Phone number</b></label>
+                        <br />
+                        <input type="tel" placeholder="(123) 456-7890" name="CompanyPhone" data-sb-validations="required, CompanyPhone" required />
+                        <div class="invalid-feedback" data-sb-feedback="CompanyPhone:required">An phone number is required.</div>
+
+                        <br /><br />
+                        <br />
+                    </td>
+                    <td>
+                        <label><b>Email</b></label>
+                        <br />
+                        <input type="email" placeholder="name@example.com" name="CompanyEmail" data-sb-validations="required, email" required />
+                        <div class="invalid-feedback" data-sb-feedback="CompanyEmail:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="CompanyEmail:email">Email is not valid.</div>
+                        <br /><br />
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="btn btn-dark" id="submitButton" type="submit" value="   Save   ">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
+
